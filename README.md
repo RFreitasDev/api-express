@@ -2,7 +2,7 @@
 
 ## Products API
 
-A simple RESTful API for managing products using Node.js, Express, and Joi for validation.
+A simple RESTful API for managing products using Node.js, Express, Joi for validation, and Swagger for API documentation.
 
 ### Features
 
@@ -11,12 +11,14 @@ A simple RESTful API for managing products using Node.js, Express, and Joi for v
 - Create a new product (with validation)
 - Update a product (with validation)
 - Delete a product
+- Interactive API documentation with Swagger
 
 ### Tech Stack
 
 - Node.js
 - Express
 - Joi
+- Swagger (swagger-ui-express, swagger-jsdoc)
 
 ### Installation
 
@@ -58,6 +60,14 @@ The API will run on [http://localhost:3030](http://localhost:3030).
 - `name`: string, required, minimum 3 characters, max 50
 - `price`: number, required, positive
 
+### API Documentation (Swagger)
+
+After starting the server, access the interactive API documentation at:
+
+[http://localhost:3030/api-docs](http://localhost:3030/api-docs)
+
+You can test all endpoints and see request/response schemas directly in your browser.
+
 ### Project Structure
 
 ```
@@ -71,6 +81,8 @@ src/
     productsRouter.js
   validator/
     validator.js
+  config/
+    swagger.js
 ```
 
 ### License
